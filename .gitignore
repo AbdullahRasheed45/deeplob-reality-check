@@ -1,7 +1,9 @@
-data/
-runs/
-datasets/
-site/
+# Directory rules are anchored to the repo root so they do not swallow src/lobrc/data/ etc.
+/data/
+/runs/
+/datasets/
+/site/
+/fi2010/
 *.parquet
 *.npz
 *.pt
@@ -11,4 +13,3 @@ __pycache__/
 .venv/
 *.tmp
 *.egg-info/
-fi2010/
