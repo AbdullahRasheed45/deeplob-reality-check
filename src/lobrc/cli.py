@@ -16,7 +16,11 @@ from lobrc import __version__
 from lobrc.logging_setup import setup_logging
 
 # Modules that expose `register(subparsers)`. Later phases append their module path here.
-_COMMAND_MODULES: list[str] = []
+_COMMAND_MODULES: list[str] = [
+    "lobrc.data.health",
+    "lobrc.data.quality",
+    "lobrc.data.compact",
+]
 
 
 def add_common_args(p: argparse.ArgumentParser) -> None:

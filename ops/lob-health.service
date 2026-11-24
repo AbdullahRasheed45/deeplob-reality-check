@@ -1,0 +1,9 @@
+[Unit]
+Description=LOB collector health check
+After=lob-collector.service
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/ubuntu/deeplob-reality-check
+ExecStart=/home/ubuntu/deeplob-reality-check/.venv/bin/lobrc health --config configs/default.yaml
+# Optional dead-man's switch: add Environment=HC_URL=https://hc-ping.com/<uuid>
