@@ -74,7 +74,7 @@ def _day_row(
 
     bid0, ask0 = cols["bid_px_0"], cols["ask_px_0"]
     nan_rows = np.zeros(rows, dtype=bool)
-    for c, v in cols.items():
+    for v in cols.values():
         nan_rows |= np.isnan(v)
     valid = ~nan_rows & (bid0 < ask0)
     mid = (ask0 + bid0) / 2
