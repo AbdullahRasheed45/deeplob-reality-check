@@ -2,9 +2,9 @@
 import json
 
 import pandas as pd
-from synth import day_start_ns, make_synthetic_arrays, write_synthetic_day, write_trades_file
 
 from lobrc.data.quality import run_quality
+from synth import day_start_ns, make_synthetic_arrays, write_synthetic_day, write_trades_file
 
 DATE = "2026-11-20"
 

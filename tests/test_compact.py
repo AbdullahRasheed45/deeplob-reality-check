@@ -1,9 +1,9 @@
 """Tests for the compactor (Phase 1, step 5)."""
 import pyarrow as pa
 import pyarrow.parquet as pq
-from synth import day_start_ns, make_synthetic_arrays, write_synthetic_day
 
 from lobrc.data.compact import compact_all
+from synth import day_start_ns, make_synthetic_arrays, write_synthetic_day
 
 DATE = "2026-11-20"
 
