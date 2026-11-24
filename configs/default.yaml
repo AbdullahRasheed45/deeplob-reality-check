@@ -1,0 +1,12 @@
+seed: 1234
+paths:
+  data_dir: data            # raw collector output (on the VM, or rsynced copy on the laptop)
+  datasets_dir: datasets
+  runs_dir: runs
+  results_dir: results
+  fi2010_dir: fi2010
+symbols: [BTCUSDT, ETHUSDT]
+primary_symbol: BTCUSDT
+levels: 10
+snapshot_ms: 100
+gap_secs: 1.0

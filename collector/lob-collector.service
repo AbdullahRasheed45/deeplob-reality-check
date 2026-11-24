@@ -1,0 +1,17 @@
+[Unit]
+Description=Limit order book data collector
+After=network-online.target chrony.service
+Wants=network-online.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/deeplob/collector
+ExecStart=/home/ubuntu/deeplob/venv/bin/python collector.py --out /home/ubuntu/deeplob/data --symbols btcusdt ethusdt
+Restart=always
+RestartSec=5
+# SIGTERM makes the collector flush its buffer before exiting; give it time.
+KillSignal=SIGTERM
+TimeoutStopSec=60
+
+[Install]
+WantedBy=multi-user.target

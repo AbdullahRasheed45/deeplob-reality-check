@@ -1,0 +1,14 @@
+data/
+runs/
+datasets/
+site/
+*.parquet
+*.npz
+*.pt
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.venv/
+*.tmp
+*.egg-info/
+fi2010/
